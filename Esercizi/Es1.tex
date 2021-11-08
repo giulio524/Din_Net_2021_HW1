@@ -1,0 +1,59 @@
+\begin{alphaparts}
+    %----------------------------------------------------------------------------
+   \questionpart
+    Definiamo tutte le possibili partizioni \(o - d\) del grafo:
+
+        \[ U_1 = \{o\}\]
+        \[U_2 = \{o, a\}\]
+        \[U_3 = \{o, b\}\]
+        \[U_4 = \{o, a, b\}\]
+
+    e tutti i possibili path \(o- d\):
+
+        \[p_1 = \{o, a, d\}\]
+        \[p_2 = \{o, b, d\}\]
+        \[p_1 = \{o, a, b, d\}\]
+    Affinché il flusso \(o- d\) si annulli deve essere rimossa almeno la seguente quantità di capacità:
+    \[C_{\min}= \min((C_1 + \min(C_2, C_5)), (C_2+\min(C_1, C_3+ C_4))) \]
+
+    Dove \(C_1 + \min(C_2, C_5)\) è la minima capacità da rimuovere nel caso in cui \(C_1> C_2\) mentre \(C_2+\min(C_1, C_3+ C_4)\) è la minima capacità da rimuovere nel caso in cui \(C_2 > C_1\)
+    
+    % --------------------------------------------
+
+    \questionpart
+
+    Definiamo le capacità dei tagli:
+    \[C_{U_1} = C_1 + C_2 = 5\]
+    \[C_{U_2} = C_2 + C_3 + C_4 = 7\]
+    \[C_{U_3} = C_1 + C_5 = 5\]
+    \[C_{U_4} = C_4 + C_5 = 5\]
+    Affinché venga aumentato il throughput, per il teorema del \textit{max flow - min cut}, è necessario aumentare la capacità del minimo taglio \(C_{\min}\).
+    Come si può notare, si hanno tre minimi tagli distinti e non c'è un arco comune a tutti, quindi non è possibile aumentare il throughput del grafo con una sola unità di capacità. Per cui \(\tau = C_{\min } = 5\)
+
+    %---------------------------------------------------
+
+    \questionpart
+    Le allocazioni ottimali per 2 unità di capacità sono le seguenti:
+
+    \begin{description}
+        \item[1.] \(+ 1\) su \(e_1\), \(+ 1\) su \(e_4\) \(\implies \tau = C_{\min} = 6\);
+        \item[2.] \(+ 1\) su \(e_1\), \(+ 1\) su \(e_5\) \(\implies \tau = C_{\min} = 6\);
+        \item[3.] \(+ 1\) su \(e_2\), \(+ 1\) su \(e_5\) \(\implies \tau = C_{\min} = 6\); 
+    \end{description}
+
+    Per ricavare queste allocazioni si è agito in modo tale da aumentare la capacità degli archi che concorrono ai tagli di capacità minima. L'opzione in cui vengono allocate 2 unità di capacità ad un solo arco non migliora \(\tau\) dal momento che non esiste un arco comune a tutti e tre i minimi tagli.
+
+    %--------------------------------------------------
+    
+    \questionpart
+    Le allocazioni ottimali per 4 unità di capacità sono le seguenti:
+
+    \begin{description}
+        \item[1.] \(+ 1\) su \(e_1\), \(+ 1\) su \(e_2\), \(+ 1\) su \(e_4\), \(+ 1\) su \(e_5\) \(\implies \tau = C_{\min} = 7\);
+        \item[2.] \(+ 2\) su \(e_1\), \(+ 2\) su \(e_4\) \(\implies \tau = C_{\min} = 7\);
+        \item[3.] \(+ 2\) su \(e_2\), \(+ 2\) su \(e_5\) \(\implies \tau = C_{\min} = 7\);
+        \item[4.] \(+ 2\) su \(e_1\), \(+ 2\) su \(e_5\) \(\implies \tau = C_{\min} = 7\);  
+    \end{description}
+
+    Tutte e 4 queste allocazioni producono una somma delle capacità dei tagli \(C_{\text{tot}} = 30\).
+    \end{alphaparts}
