@@ -973,14 +973,20 @@ INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
+INPUT ./Esercizi/Es2.tex
+INPUT Esercizi/Es2.tex
+INPUT ./Esercizi/Es2.tex
+INPUT Esercizi/Es2.tex
 INPUT homework.aux
 INPUT ./homework.out
 INPUT ./homework.out
+INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
-INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb
@@ -989,3 +995,4 @@ INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr6.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb

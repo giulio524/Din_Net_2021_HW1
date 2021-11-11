@@ -1,0 +1,42 @@
+\begin{alphaparts}
+
+    \questionpart
+
+    Per il seguente grafo si possono identificare due path distinti tra \(n_1\) e \(n_6\):
+    \[p_1 = \{n_1, n_2, n_3, n_6\}\]
+    \[p_2 = \{n_1, n_4, n_5, n_6\}.\]
+
+    Definendo con \(z_i\) il flusso sull'i-esimo path andiamo a calcolare il costo totale del sistema:
+    \[C = z_1(\underbrace{3z_1+ z_1+ 1+ z_1+ 1}_{ \text{flusso su }p_1})+ z_2(\underbrace{z_2+ 1 +z_2+ 1 + 3z_2}_{ \text{flusso su} p_2}).\]
+    Poiché il throughput del grafo è pari a 2, vale:
+    \[z_1+ z_2 = 2.\]
+    Pertanto, per sostituzione si ottiene:
+    \[C = 10z_1^2 - 20z_1 + 24. \]
+    \[C' = 0 \implies z_1 = 1\]
+    quindi
+    \[z^* = \arg\min C(z) = \begin{pmatrix}
+        1\\
+        1
+    \end{pmatrix}.  \]
+
+    Poiché vale:
+    \[ f^* = A^{n_1,n_6}z^*\]
+    \[ f^* = \begin{pmatrix}
+        1 & 0 \\
+        1 & 0 \\
+        1 & 0 \\
+        0 & 1 \\
+        0 & 1 \\
+        0 & 1 
+    \end{pmatrix} \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+     = \begin{pmatrix}
+        1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1
+    \end{pmatrix}. \]
+
+% ------------------------------------------------------------------------------
+
+    \questionpart
+    
+
+
+\end{alphaparts}
