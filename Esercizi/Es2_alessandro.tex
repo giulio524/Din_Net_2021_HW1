@@ -1,0 +1,247 @@
+\begin{alphaparts}
+
+    \questionpart
+
+    Per il seguente grafo si possono identificare due path distinti tra \(n_1\) e \(n_6\):
+    \[p_1 = \{n_1, n_2, n_3, n_6\},\]
+    \[p_2 = \{n_1, n_4, n_5, n_6\}.\]
+
+    Definendo con \(z_i\) il flusso sull'i-esimo path andiamo a calcolare il costo totale del sistema:
+    \[C = z_1(\underbrace{3z_1+ z_1+ 1+ z_1+ 1}_{ \text{flusso su }p_1})+ z_2(\underbrace{z_2+ 1 +z_2+ 1 + 3z_2}_{ \text{flusso su} p_2}).\]
+    Poiché il throughput del grafo è pari a 2, vale:
+    \[z_1+ z_2 = 2.\]
+    Pertanto, per sostituzione si ottiene:
+    \[C = 10z_1^2 - 20z_1 + 24. \]
+    \[C' = 0 \implies z_1 = 1,\]
+    quindi
+    \[z^* = \arg\min C(z) = \begin{pmatrix}
+        1\\
+        1
+    \end{pmatrix}.  \]
+
+    Poiché vale:
+    \[ f^* = A^{n_1,n_6}z^*,\]
+    \[ f^* = \begin{pmatrix}
+        1 & 0 \\
+        1 & 0 \\
+        1 & 0 \\
+        0 & 1 \\
+        0 & 1 \\
+        0 & 1 
+    \end{pmatrix} \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+     = \begin{pmatrix}
+        1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1
+    \end{pmatrix}. \]
+
+% ------------------------------------------------------------------------------
+
+    \questionpart
+    
+    Per calcolare l'equilibro di Wardrop se ne esplicitano le condizioni necessarie:
+
+    \[z_1 > 0 \implies \begin{cases} 5z_1 + 2 \leq 5z_2 + 2 \\ 5z_1 + 2 \leq 10- 5z_1 + 2 \end{cases} \xRightarrow[]{z_1+ z_2= 2} z_1 \leq 1,\]
+    \[ z_2 > 0 \implies 5z_1 + 2 \geq 5z_2 + 2 \xRightarrow[]{z_1+ z_2= 2} z_1 \geq 1, \]
+
+    quindi \(z_1 = 1.\) Se ne conclude che:
+    \[ z^{(0)} = \begin{pmatrix}
+        1 \\ 1
+    \end{pmatrix}.\]
+
+    Poiché \(z^{(0)} = z^*\) risulta immediato che:
+    \[\text{PoA} = 1.\]
+
+    \questionpart
+   Inseriamo il seguente link all'interno del grafo:
+        \ctikzfig{grafo_es2_b}
+    I possibili path all'interno del grafo risultano quindi essere:
+
+    \[p_1 = \{n_1, n_2, n_3, n_6\},\]
+    \[p_2 = \{n_1, n_4, n_5, n_6\},\]
+    \[p_3 = \{n_1, n_2, n_5, n_6\},\]
+
+    Posto
+    \[d_1 = 5\,z_1+3\,z_3 +2,\]
+    \[d_2 = 5\,z_2+3\,z_3 +2,\]
+    \[d_3 = 7\,z_3+3\,z_2 +3\,z_1,\]
+     per calcolare l'equilibro di Wardrop si esplicitano le seguenti condizioni necessarie:
+\begin{itemize}
+    \item\[z_1 > 0 \implies \begin{cases} d_1 \le d_2, \\ d_1 \le d_3. \end{cases} \]
+    La prima equazione può essere riscritta come
+    \[d_1 \le d_2 \Leftrightarrow 5\,z_1+3\,z_3 +2 \le 5\,z_2+3\,z_3 +2 \Leftrightarrow z_1 \le z_2, \]
+    mentre la seconda diviene
+    \[d_1 \le d_3 \Leftrightarrow 5\,z_1+3\,z_3 +2 \le 7\,z_3+3\,z_2 +3\,z_1 \Leftrightarrow  
+    2\,z_1 -3\,z_2 -4\,z_3 +2 \le 0.\]
+    Pertanto
+    \[2\,z_1 -3\,z_2 -4\,z_3 +2 \le 0\xRightarrow[]{z_1+ z_2 + z_3= 2} 6\,z_1 + z_2 -6 \le 0\xRightarrow[]{z_1 \le z_2} z_1 \le \frac{6}{7}.\]
+    
+    \item \[z_2 > 0 \implies \begin{cases} d_2 \le d_1, \\ d_2 \le d_3. \end{cases} \]
+     La prima equazione può essere riscritta come
+    \[d_1 \ge d_2 \Leftrightarrow z_1 \ge z_2 \Rightarrow z_1 = z_2, \]
+    mentre la seconda diviene
+    \[d_2 \le d_3 \Leftrightarrow 5\,z_2+3\,z_3 +2 \le 7\,z_3+3\,z_2 +3\,z_1 \Leftrightarrow  
+    3\,z_1 -2\,z_2 +4\,z_3 -2 \ge 0.\]
+    Pertanto
+    \[3\,z_1 -2\,z_2 +4\,z_3 -2 \ge 0\xRightarrow[]{z_1+ z_2 + z_3= 2} z_1 + 6\,z_2 -6 \le 0\xRightarrow[]{z_1 \ge z_2} z_2 \le \frac{6}{7}.\]
+    
+    \item \[z_3 > 0 \implies \begin{cases} d_3 \le d_1, \\ d_2 \ge d_3. \end{cases} \]
+     La prima equazione può essere riscritta come
+    \[d_3 \le d_1 \Leftrightarrow 5\,z_1+3\,z_3 +2 \ge 7\,z_3+3\,z_2 +3\,z_1 \Leftrightarrow 
+    2\,z_1-3\,z_2-4\,z_3+2\ge 0 \]
+    mentre la seconda diviene
+    \[d_2 \le d_3 \Leftrightarrow 3\,z_1 -2\,z_2 +4\,z_3 -2 \le 0.\]
+    Pertanto
+    \[ \begin{cases} 2\,z_1-3\,z_2-4\,z_3+2\ge 0, \\ 3\,z_1 -2\,z_2 +4\,z_3 -2 \le 0, \end{cases} \xRightarrow[]{z_1+ z_2 + z_3= 2} \begin{cases} 6\,z_1+z_2-6\ge 0, \\ z_1+6\,z_2-6\ge 0. \end{cases} \]
+    Poiché nei punti precedenti si è ottenuto che \(z_1 = z_2\), allora
+    \[ \begin{cases} z_1 \ge \frac{6}{7}, \\ z_2 \ge \frac{6}{7}. \end{cases}\]
+    \end{itemize}
+    Di conseguenza
+    \[z_1 = z_2 = \frac{6}{7} \xRightarrow[]{z_1+ z_2 + z_3= 2} z_3 = \frac{2}{7},\]
+    e quindi posto 
+    \[ z^{(0)} = \begin{pmatrix}
+       6/7  \\ 6/7 \\ 2/7
+    \end{pmatrix},\]
+    il vettore di flusso 
+    \[ f^{(0)} = A^{n_1,n_6}z^{(0)},\]
+    \[ f^{(0)} = \begin{pmatrix}
+        1 & 0 & 1\\
+        1 & 0 & 0\\
+        1 & 0 & 0\\
+        0 & 1 & 0\\
+        0 & 1 & 1\\
+        0 & 0 & 1
+    \end{pmatrix} \begin{pmatrix} 6/7  \\ 6/7 \\ 2/7 \end{pmatrix}
+     = \begin{pmatrix}
+        8/7 \\ 6/7 \\ 6/7 \\ 6/7 \\ 6/7 \\ 8/7 \\ 2/7
+    \end{pmatrix}, \]
+    è un equilibrio di Wardrop.
+    Il costo totale corrispondente è
+    \[3\,\frac{64}{49} + \left(\frac{36}{49} + \frac{42}{49} \right) + \left( \frac{36}{49} + \frac{42}{49} \right) + \left( \frac{36}{49} + \frac{42}{49} \right) + \]
+    \[ + \left( \frac{36}{49} + \frac{42}{49} \right) + 3\,\frac{64}{49} + \frac{4}{49} = \frac{100}{7} \simeq 14.3. \]
+    Nel caso precedente (grafo senza il link \(e_7\)) poiché
+     \[ f^{(0)} = \begin{pmatrix}
+        1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1
+    \end{pmatrix},\]
+    il costo corrispondente era pari a 
+    \[ 3 + 2 + 2 + 2 + 2 + 3 = 14, \]
+    pertanto, aggiungendo il link \(e_7\) si è aumentato il costo totale e quindi si è verificato il paradosso di Braess.
+    
+    L'ottimo di sistema del nuovo grafo è la soluzione del seguente problema di ottimizzazione
+    \[ \text{minimize} \quad 5\,z_1^2 + 3\,z_3\,z_1 + 2\,z_1 + 5\,z_2^2 + 3\,z_3\,z_2 + 2\,z_2 + 7\,z_3^2 + 3\,z_2\,z_3 + 3\,z_3\,z_1,\]
+    \[ \text{subject to} \quad z_1 + z_2 + z_3 = 2,\]
+    il quale ha come soluzione
+     \[ z^{*} = \begin{pmatrix}
+        1 \\ 1 \\ 0
+    \end{pmatrix}.\]
+    Di conseguenza, il prezzo dell'anarchia del nuovo grafo è
+    \[ \frac{\frac{100}{7}}{14} = \frac{100}{98} \simeq 1.02.\]
+    
+% ------------------------------------------------------------------------------
+
+    \questionpart
+    Dal punto precedente 
+       \[ f^{*} = \begin{pmatrix}
+        1 & 0 & 1\\
+        1 & 0 & 0\\
+        1 & 0 & 0\\
+        0 & 1 & 0\\
+        0 & 1 & 1\\
+        0 & 0 & 1
+    \end{pmatrix} \begin{pmatrix} 1  \\ 1 \\ 0 \end{pmatrix}
+     = \begin{pmatrix}
+        1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 0
+    \end{pmatrix}, \]
+    poiché è noto che 
+    \begin{align} &\omega_{e}^{*} = f_{e}^{*}\,d_{e} \left(f_{e}^{*}\right),&& e\in\mathcal{E}, \end{align}
+    si ricava che 
+    \[ \omega_1 = 3, \,
+    \omega_2 = 1, \,
+    \omega_3 = 1, \,
+    \omega_4 = 1, \,
+    \omega_5 = 1, \,
+    \omega_6 = 3, \,
+    \omega_7 = 0, \,
+    \]
+    per cui 
+    \[ \omega^{*} = \begin{pmatrix}
+        3 \\ 1 \\ 1 \\ 1 \\ 1 \\ 3 \\ 0
+    \end{pmatrix}\]
+    è la distribuzione ottimale dei pedaggi.
+    Al fine di calcolare una distribuzione ottimale dei pedaggi a supporto pieno si consideri il pedaggio \(\omega^{*} + a\mathbbm{1}\). Intuitivamente, quello che si sta facendo è aggiungere lo stesso pedaggio costante, pari ad \(a>0\), ad ogni link. Poiché tutti i path hanno la stessa lunghezza pari a $3$, questo fatto non dovrebbe influire sulla scelta della strada da parte degli utenti. Sarebbe come se gli utenti dovessero pagare un pedaggio pari a $3a$ per accedere alla rete, indipendentemente dal path scelto.
+
+A questo punto osserviamo che, preso \(\omega^*\in\mathbb{R}_{+}^{\mathcal{E}} : f^{(\omega^*)} = f^{*}\), allora
+\[ f^{(\omega^{*} + a\mathbbm{1})} = f^{(\omega^*)} = f^{*}. \]
+Sappiamo, infatti, che $f^{(\omega^*)}$ è un equilibrio di Wardrop per un pedaggio $\omega^*$ quindi
+\[z_p>0\implies\]
+\[\implies \sum_{e\in\mathcal{E}} A_{ep}^{(n1,n6)} \left(d_{e}\left(f_{e}^{(\omega^*)}\right)+\omega_{e}^{*}\right) \le \sum_{e\in\mathcal{E}} A_{eq}^{(n1,n6)} \left(d_{e}\left(f_{e}^{(\omega^*)}\right)+\omega_{e}^{*}\right), \forall q \in \Gamma_{n1,n6}. \]
+D'altra parte anche  $f^{(\omega^{*} + a\mathbbm{1})}$ è un equilibrio di Wardrop per un pedaggio $\omega^{*} + a\mathbbm{1}$, per cui \( \forall q \in \Gamma_{n1,n6},\)
+\[z_p>0\implies\]
+\[\sum_{e\in\mathcal{E}} A_{ep}^{(n1,n6)} \left(d_{e}\left(f_{e}^{(\omega^{*} + a\mathbbm{1})}\right)+\omega_{e}^{*} + a \right) \le \sum_{e\in\mathcal{E}} A_{eq}^{(n1,n6)} \left(d_{e}\left(f_{e}^{(\omega^{*} + a\mathbbm{1})}\right)+\omega_{e}^{*} + a \right). \]
+Tuttavia, quest'ultima condizione può essere riscritta come
+\begin{align}
+&\sum_{e\in\mathcal{E}} A_{ep}^{(n1,n6)} \left(d_{e}\left(f_{e}^{(\omega^{*} + a\mathbbm{1})}\right)+\omega_{e}^{*} \right)+ a\sum_{e\in\mathcal{E}} A_{ep}^{(n1,n6)} \nonumber\\ 
+&\le \sum_{e\in\mathcal{E}} A_{eq}^{(n1,n6)} \left(d_{e}\left(f_{e}^{(\omega^{*} + a\mathbbm{1})}\right)+\omega_{e}^{*}\right) + a\sum_{e\in\mathcal{E}} A_{eq}^{(n1,n6)} , \hspace{0.5cm} \forall q \in \Gamma_{n1,n6},\nonumber\\
+&\sum_{e\in\mathcal{E}} A_{ep}^{(n1,n6)} \left(d_{e}\left(f_{e}^{(\omega^{*} + a\mathbbm{1})}\right)+\omega_{e}^{*} \right) + 3a \le \sum_{e\in\mathcal{E}} A_{eq}^{(n1,n6)} \left(d_{e}\left(f_{e}^{(\omega^{*} + a\mathbbm{1})}\right)+\omega_{e}^{*}\right) +3a , \hspace{0.5cm} \forall q \in \Gamma_{n1,n6},\nonumber\\
+&\sum_{e\in\mathcal{E}} A_{ep}^{(n1,n6)} \left(d_{e}\left(f_{e}^{(\omega^{*} + a\mathbbm{1})}\right)+\omega_{e}^{*} \right) \le \sum_{e\in\mathcal{E}} A_{eq}^{(n1,n6)} \left(d_{e}\left(f_{e}^{(\omega^{*} + a\mathbbm{1})}\right)+\omega_{e}^{*}\right) , \hspace{0.5cm} \forall q \in \Gamma_{n1,n6}.\nonumber
+\end{align}
+Poiché per il grafo in esame le funzioni di ritardo sugli edge $d_{e}$, definite in precedenza, sono tutte funzioni crescenti questo ci dice che l'equilibrio di Wardrop per un dato $\omega\in\mathbb{R}_{+}$ è unico, e quindi se vale la disuguaglianza precedente si ha che
+\[f^{(\omega^{*} + a\mathbbm{1})} = f^{(\omega^*)}.\]
+Pertanto, il vettore di pedaggi 
+\begin{align} 
+\omega^{*}_{fs} &=  \omega^{*} + a\mathbbm{1}
+ 			= \begin{pmatrix}
+        				4 \\ 2 \\ 2 \\ 2 \\ 2 \\ 4 \\ 1
+    			     \end{pmatrix},&& a>0\nonumber
+\end{align}
+è un vettore di pedaggi con supporto pieno il cui vettore dei flussi ottimale corrispondente riduce il PoA a $1$.
+ 
+ Al fine di trovare un vettore di pedaggi di supporto minimo si osserva che \(\text{PoA} = 1\) se 
+ \[ f^{(\omega)} = f^{*}\]
+ ossia
+ \[z^{(\omega)} = z^{*}.\]
+Ricordando che
+ \[z^{*} = \begin{pmatrix}
+        				1 \\ 1 \\ 0
+    			     \end{pmatrix} \]
+si nota che, nel rispetto dell'ottimo di sistema, nessun utente sceglie di percorrere il path $p_3$. Pertanto, un $\omega_{ms}^{*}$ di supporto minimo tale per cui gli utenti non hanno alcun motivo di scegliere il path $3$ produrrebbe quindi \(z^{(\omega_{ms}^{*})} = z^{*}\). Si sceglie quindi
+\begin{align}&\omega_{ms}^{*} =  \begin{pmatrix}
+        				0 \\ 0 \\  0 \\ 0 \\ 0 \\ 0 \\ k
+    			     \end{pmatrix},&&k>0.\nonumber \end{align}
+Per determinare il $k$ più opportuno si ragiona nel modo seguente:
+\[ z_{3}^{(\omega_{ms}^{*})} > 0 \implies \begin{cases} 3\left(z_1 + z_3\right) + z_3 + k +3\left(z_2 + z_3\right) \le 3\left(z_1 + z_3 \right) + z_1 + 1 + z_1 + 1, \\ 3\left(z_1 + z_3\right) + z_3 + k +3\left(z_2 + z_3\right) \le  z_2 + 1 + z_2 + 1 + 3\left(z_2 + z_3 \right), \end{cases} \]
+\[ \Leftrightarrow \begin{cases} z_3 \le \frac{2\,z_1-3\,z_2+2-k}{4} \\ z_3 \le \frac{2\,z_2-3\,z_1+2-k}{4} \end{cases} \xRightarrow[]{z_1\le 2 \,\land\, z_2\le 2} \begin{cases} z_3 \le \frac{6-3\,z_2-k}{4} \\ z_3 \le \frac{6-3\,z_1-k}{4} \end{cases}\xRightarrow[]{z_1\ge 0 \,\land\, z_2 \ge 0}\begin{cases} z_3 \le \frac{6-k}{4} \\ z_3 \le \frac{6-k}{4} \end{cases}.\]
+Pertanto, se si sceglie $k=6$ allora 
+\[z_{3}^{(\omega_{ms}^{*})} \le 0 \implies  z_{3}^{(\omega_{ms}^{*})} = 0,\]
+e quindi
+\[z^{(\omega_{ms}^{*})} = z^{*}= \begin{pmatrix}
+        				1 \\ 1 \\ 0
+    			     \end{pmatrix}.\]
+			     
+% ------------------------------------------------------------------------------
+
+    \questionpart
+In questo caso il nuovo grafo presenta dei ritardi ancora minori sui path $p_1$ e $p_2$, in quanto il ritardo è diminuito di due unità su entrambi i path. L'incentivo a prendere il path $p_3$ diminuisce, pertanto è verosimile che l'ottimo di sistema del nuovo grafo sia ancora 
+\[ z^{*} = \begin{pmatrix}
+        1 \\ 1 \\ 0
+    \end{pmatrix},\]
+in quanto, se prima non c'era motivo di prendere il path $p_3$, ora è ancora meno conveniente.
+
+Quindi una distribuzione di pedaggi tale che \(\text{PoA} = 1\) è quella in cui il pedaggio sul link $e_7$ è talmente alto che non è conveniente percorrerlo anche se vuoto. Quindi, analogamente al punto precedente si sceglie 
+\begin{align}&\omega =  \begin{pmatrix}
+        				0 \\ 0 \\  0 \\ 0 \\ 0 \\ 0 \\ a
+    			     \end{pmatrix},&&a>0.\nonumber \end{align}
+Per determinare il $k$ più opportuno si ragiona nel modo seguente:
+\[ z_{3}^{(\omega)} > 0 \implies \begin{cases} 3\left(z_1 + z_3\right) + z_3 + a +3\left(z_2 + z_3\right) \le 3\left(z_1 + z_3 \right) + 2\,z_1, \\ 3\left(z_1 + z_3\right) + z_3 + a +3\left(z_2 + z_3\right) \le  2\,z_2 + 3\left(z_2 + z_3 \right), \end{cases} \]
+\[ \Leftrightarrow \begin{cases} z_3 \le \frac{2\,z_1-3\,z_2-a}{4} \\ z_3 \le \frac{2\,z_2-3\,z_1-a}{4} \end{cases} \xRightarrow[]{0\le z_e \le 2, \, e\in\{1,2\}}\begin{cases} z_3 \le \frac{4-a}{4} \\ z_3 \le \frac{4-a}{4} \end{cases}.\]
+Pertanto, se si sceglie $a=4$ allora 
+\[z_{3}^{(\omega)} \le 0 \implies  z_{3}^{(\omega)} = 0,\]
+per cui la distribuzione di pedaggi 
+\[\omega =  \begin{pmatrix}
+        				0 \\ 0 \\  0 \\ 0 \\ 0 \\ 0 \\ a
+    			     \end{pmatrix},\]
+è ottimale, infatti
+\[ z^{\omega} = \begin{pmatrix}
+        1 \\ 1 \\ 0
+    \end{pmatrix}.\]
+
+
+\end{alphaparts}

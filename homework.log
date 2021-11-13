@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.7.4)  11 NOV 2021 11:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.7.4)  13 NOV 2021 21:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -848,25 +848,78 @@ Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
  (./Esercizi/Es1.tex [1
 
-{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./Esercizi/Es2.tex [2] [3] (./figures/grafo_es2_b.tikz)) [4] (./homework.aux)
+{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./Esercizi/Es2_alessandro.tex [2] [3] (./figures/grafo_es2_b.tikz)
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 68.
+ (c:/texlive/2021/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Overfull \hbox (6.45241pt too wide) detected at line 73
+\OML/lmm/m/it/10.95 d[] \OMS/lmsy/m/n/10.95 ^^T \OML/lmm/m/it/10.95 d[] \OMS/lmsy/m/n/10.95 , \OT1/lmr/m/n/10.95 5 \OML/lmm/m/it/10.95 z[] \OT1/lmr/m/n/10.95 + 3 \OML/lmm/m/it/10.95 z[] \OT1/lmr/m/n/10.95 + 2 \OMS/lmsy/m/n/10.95 ^^T \OT1/lmr/m/n/10.95 7 \OML/lmm/m/it/10.95 z[] \OT1/lmr/m/n/10.95 + 3 \OML/lmm/m/it/10.95 z[] \OT1/lmr/m/n/10.95 + 3 \OML/lmm/m/it/10.95 z[] \OMS/lmsy/m/n/10.95 , \OT1/lmr/m/n/10.95 2 \OML/lmm/m/it/10.95 z[] \OMS/lmsy/m/n/10.95 ^^@ \OT1/lmr/m/n/10.95 3 \OML/lmm/m/it/10.95 z[] \OMS/lmsy/m/n/10.95 ^^@ \OT1/lmr/m/n/10.95 4 \OML/lmm/m/it/10.95 z[] \OT1/lmr/m/n/10.95 + 2 \OMS/lmsy/m/n/10.95 ^^T \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :
+ []
+
+[4]
+Overfull \hbox (6.45241pt too wide) detected at line 82
+\OML/lmm/m/it/10.95 d[] \OMS/lmsy/m/n/10.95 ^^T \OML/lmm/m/it/10.95 d[] \OMS/lmsy/m/n/10.95 , \OT1/lmr/m/n/10.95 5 \OML/lmm/m/it/10.95 z[] \OT1/lmr/m/n/10.95 + 3 \OML/lmm/m/it/10.95 z[] \OT1/lmr/m/n/10.95 + 2 \OMS/lmsy/m/n/10.95 ^^T \OT1/lmr/m/n/10.95 7 \OML/lmm/m/it/10.95 z[] \OT1/lmr/m/n/10.95 + 3 \OML/lmm/m/it/10.95 z[] \OT1/lmr/m/n/10.95 + 3 \OML/lmm/m/it/10.95 z[] \OMS/lmsy/m/n/10.95 , \OT1/lmr/m/n/10.95 3 \OML/lmm/m/it/10.95 z[] \OMS/lmsy/m/n/10.95 ^^@ \OT1/lmr/m/n/10.95 2 \OML/lmm/m/it/10.95 z[] \OT1/lmr/m/n/10.95 + 4 \OML/lmm/m/it/10.95 z[] \OMS/lmsy/m/n/10.95 ^^@ \OT1/lmr/m/n/10.95 2 \OMS/lmsy/m/n/10.95 ^^U \OT1/lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :
+ []
+
+
+Overfull \hbox (3.41074pt too wide) detected at line 89
+\OML/lmm/m/it/10.95 d[] \OMS/lmsy/m/n/10.95 ^^T \OML/lmm/m/it/10.95 d[] \OMS/lmsy/m/n/10.95 , \OT1/lmr/m/n/10.95 5 \OML/lmm/m/it/10.95 z[] \OT1/lmr/m/n/10.95 + 3 \OML/lmm/m/it/10.95 z[] \OT1/lmr/m/n/10.95 + 2 \OMS/lmsy/m/n/10.95 ^^U \OT1/lmr/m/n/10.95 7 \OML/lmm/m/it/10.95 z[] \OT1/lmr/m/n/10.95 + 3 \OML/lmm/m/it/10.95 z[] \OT1/lmr/m/n/10.95 + 3 \OML/lmm/m/it/10.95 z[] \OMS/lmsy/m/n/10.95 , \OT1/lmr/m/n/10.95 2 \OML/lmm/m/it/10.95 z[] \OMS/lmsy/m/n/10.95 ^^@ \OT1/lmr/m/n/10.95 3 \OML/lmm/m/it/10.95 z[] \OMS/lmsy/m/n/10.95 ^^@ \OT1/lmr/m/n/10.95 4 \OML/lmm/m/it/10.95 z[] \OT1/lmr/m/n/10.95 + 2 \OMS/lmsy/m/n/10.95 ^^U \OT1/lmr/m/n/10.95 0
+ []
+
+[5] [6]
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 169.
+ (c:/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+) [7]
+Overfull \hbox (51.12846pt too wide) detected at line 175
+ \OT1/lmr/m/n/10.95 =[]\OMS/lmsy/m/n/10.95 )  [] \OML/lmm/m/it/10.95 A[] [] \OMS/lmsy/m/n/10.95 ^^T [] \OML/lmm/m/it/10.95 A[] [] ; \OMS/lmsy/m/n/10.95 8\OML/lmm/m/it/10.95 q \OMS/lmsy/m/n/10.95 2 \OT1/lmr/m/n/10.95 ^^@[]\OML/lmm/m/it/10.95 :
+ []
+
+
+Overfull \hbox (36.93356pt too wide) detected at line 178
+[] \OML/lmm/m/it/10.95 A[] [] \OMS/lmsy/m/n/10.95 ^^T [] \OML/lmm/m/it/10.95 A[] [] :
+ []
+
+
+Overfull \hbox (120.24405pt too wide) detected at line 185
+[]
+ []
+
+[8]
+Overfull \hbox (72.33151pt too wide) detected at line 210
+\OML/lmm/m/it/10.95 z[] > \OT1/lmr/m/n/10.95 0  =[]\OMS/lmsy/m/n/10.95 )  []
+ []
+
+
+Overfull \hbox (56.90952pt too wide) detected at line 211
+\OMS/lmsy/m/n/10.95 , [] [] [] [] [] \OML/lmm/m/it/10.95 :
+ []
+
+[9]
+Overfull \hbox (8.14915pt too wide) detected at line 233
+\OML/lmm/m/it/10.95 z[] > \OT1/lmr/m/n/10.95 0  =[]\OMS/lmsy/m/n/10.95 )  []
+ []
+
+[10]) [11] (./homework.aux)
 Package rerunfilecheck Info: File `homework.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  )
 (\end occurred when \ifx on line 41 was incomplete)
 (\end occurred when \ifx on line 39 was incomplete) 
 Here is how much of TeX's memory you used:
- 29644 strings out of 478517
- 542375 string characters out of 5853902
- 991095 words of memory out of 5000000
- 47000 multiletter control sequences out of 15000+600000
- 437431 words of font info for 60 fonts, out of 8000000 for 9000
+ 29709 strings out of 478517
+ 543980 string characters out of 5853902
+ 995097 words of memory out of 5000000
+ 47045 multiletter control sequences out of 15000+600000
+ 438192 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,97p,3293b,925s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on homework.pdf (4 pages, 180806 bytes).
+ 99i,14n,97p,3293b,925s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc} <c:/Users/giuli/.texlive2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm8.600pk>{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <c:/Users/giuli/.texlive2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk>{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on homework.pdf (11 pages, 214627 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
+ 168 PDF objects out of 1000 (max. 8388607)
+ 120 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
