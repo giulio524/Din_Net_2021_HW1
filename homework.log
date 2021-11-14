@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.11.14)  14 NOV 2021 16:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.11.14)  14 NOV 2021 19:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -892,7 +892,7 @@ Overfull \hbox (8.14915pt too wide) detected at line 233
 \OML/lmm/m/it/10.95 z[] > \OT1/lmr/m/n/10.95 0  =[]\OMS/lmsy/m/n/10.95 )  []
  []
 
-[10]) (/home/giulio524/Documenti/GitHub/Din_Net_2021_HW1/Esercizi/Es_3.tex
+[10]) (/home/giulio524/Documenti/GitHub/Din_Net_2021_HW1/Esercizi/Es3_alessandro.tex
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 3.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -906,11 +906,25 @@ Overfull \hbox (83.17929pt too wide) in paragraph at lines 38--40
  []
 
 
-Overfull \hbox (93.9794pt too wide) in paragraph at lines 67--68
+Overfull \hbox (6.70793pt too wide) in paragraph at lines 67--68
+[]\T1/lmr/m/n/10.95 La \T1/lmr/m/it/10.95 eigenvector-centrality\T1/lmr/m/n/10.95 , in-vece, misura la cen-tral-ità di un nodo tenendo
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 69.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 69.
+[12]
+Overfull \hbox (93.9794pt too wide) in paragraph at lines 96--97
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[12] [13]) [14] (/home/giulio524/Documenti/GitHub/Din_Net_2021_HW1/homework.aux)
+[13]
+Overfull \hbox (9.5969pt too wide) in paragraph at lines 139--140
+\T1/lmr/m/n/10.95 porzionale alla \T1/lmr/m/it/10.95 degree-centrality\T1/lmr/m/n/10.95 , per questo mo-tivo la \T1/lmr/m/it/10.95 invariant-centrality
+ []
+
+[14]) [15] (/home/giulio524/Documenti/GitHub/Din_Net_2021_HW1/homework.aux)
 Package rerunfilecheck Info: File `homework.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  )
@@ -918,18 +932,18 @@ Package rerunfilecheck Info: File `homework.out' has not changed.
 (\end occurred when \ifx on line 42 was incomplete)
 (\end occurred when \ifx on line 40 was incomplete) 
 Here is how much of TeX's memory you used:
- 27398 strings out of 479304
- 512423 string characters out of 5869778
- 996964 words of memory out of 5000000
- 43872 multiletter control sequences out of 15000+600000
- 442425 words of font info for 69 fonts, out of 8000000 for 9000
+ 27425 strings out of 479304
+ 512724 string characters out of 5869778
+ 990964 words of memory out of 5000000
+ 43886 multiletter control sequences out of 15000+600000
+ 450702 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,14n,102p,3294b,2014s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc} </home/giulio524/.texlive2020/texmf-var/fonts/pk/ljfour/public/bbm/bbm8.600pk>{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc} </home/giulio524/.texlive2020/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk>{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on /home/giulio524/Documenti/GitHub/Din_Net_2021_HW1/homework.pdf (14 pages, 231041 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc} </home/giulio524/.texlive2020/texmf-var/fonts/pk/ljfour/public/bbm/bbm8.600pk>{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc} </home/giulio524/.texlive2020/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk>{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on /home/giulio524/Documenti/GitHub/Din_Net_2021_HW1/homework.pdf (15 pages, 258233 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
- 102 named destinations out of 1000 (max. 500000)
+ 277 PDF objects out of 1000 (max. 8388607)
+ 239 compressed objects within 3 object streams
+ 105 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

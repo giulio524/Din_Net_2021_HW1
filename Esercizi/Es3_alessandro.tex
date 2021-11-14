@@ -1,0 +1,152 @@
+\begin{alphaparts}
+    \questionpart
+    \begin{lstlisting}
+       
+        W1 = ones(6,6)-diag(ones(1,6));
+        
+        W2 = zeros(6,8);
+        W2(6,1)=1;
+        
+        W3 = [0,1,0,0,0,0,0,0;
+              1,0,1,0,0,0,0,0;
+              0,1,0,1,1,1,1,1;
+              0,0,1,0,0,0,0,0;
+              0,0,1,0,0,0,0,0;
+              0,0,1,0,0,0,0,0;
+              0,0,1,0,0,0,0,0;
+              0,0,1,0,0,0,0,0];
+        
+        W = [W1, W2;
+            W2', W3];
+        
+        G=graph(W);
+        
+        
+        deegre_centrality = G.degree
+        
+        P = diag(deegre_centrality.^-1)*W;
+        
+        %Calcolo della eigenvector centrality
+        [X,d] = eigs(W');
+        eig_centrality = X(:,1)
+        
+        %Calcolo della invariant centrality
+        [X,d] = eigs(P');
+        invariant_centrality = X(:,1)
+        %NB-> poiche' il grafo e' undirected e 
+        %fortemente connesso =>
+        % => invariant_centrality = deegre_centrality/norm(deegre_centrality)      
+        
+    \end{lstlisting}
+    
+    %
+\begin{table}[htb]
+    \centering
+    \caption{Confronto tra le centralità}.
+    \begin{tabular}{llllll}
+     Nodes & Degree & Eigenvector & Invariant\\
+    1 & $5$ & $0.4042$ & $0.3450$\\
+    2 & $5$ & $0.4042$ & $0.3450$\\
+    3 & $5$ & $0.4042$ & $0.3450$\\
+    4 & $5$ & $0.4042$ & $0.3450$\\
+    5 & $5$ & $0.4042$ & $0.3450$\\
+    6 & $6$ & $0.4186$ & $0.4140$\\
+    7 & $2$ & $0.0867$ & $0.1380$\\
+    8 & $2$ & $0.0181$ & $0.1380$\\
+    9 & $6$ & $0.0045$ & $0.4140$\\
+    10 & $1$ & $8.8970e-4$ & $0.0690$\\
+    11 & $1$ & $8.8970e-4$ & $0.0690$\\
+    12 & $1$ & $8.8970e-4$ & $0.0690$\\
+    13 & $1$ & $8.8970e-4$ & $0.0690$\\
+    14 & $1$ & $8.8970e-4$ & $0.0690$\\
+    \end{tabular}
+ \end{table}
+%
+Poiché la \textit{degree-centrality} di un nodo è definita come il suo \textit{in-degree} si osserva che questa è minima per i nodi $n_{10},n_{11},n_{12},n_{13},n_{14}$ e massima per i nodi $n_6$ e $n_9$.
+
+La \textit{eigenvector-centrality}, invece, misura la centralità di un nodo tenendo conto della centralità degli \textit{in-neighbours}, pertanto i nodi che hanno un maggiore \textit{in-degree}, come $n_1,n_2,n_3,n_4,n_5,n_6$, hanno una centralità più grande, dal momento che formano un cluster molto ben connesso (formano un sottografo completo).
+
+Per quanto riguarda la \textit{invariant-centrality}, la centralità di ciascun nodo è proporzionale alla \textit{degree-centrality}\footnote{Dal momento che il grafo è bilanciato (undirected) e fortemente connesso}, per questo motivo questa risulta essere, per i nodi $n_1,n_2,n_3,n_4,n_5$ più bassa e per i nodi $n_7$, $n_8$, $n_9$, $n_{10}$, $n_{11}$, $n_{12}$, $n_{13}$, $n_{14}$ più alta, rispetto alla \textit{eigenvector-centrality}.
+
+    \questionpart
+    \begin{lstlisting}
+        %Dinamica per il calcolo di Page-Rank
+        n=14;
+        beta = 0.15;
+        mu = ones(n,1)/n;
+        z_PG=zeros(14,1);
+        k=0;
+        k_max = 10000;
+        flag=true;
+        tol=1.0e-6;
+        
+        while k<k_max && flag
+            z_PG_new=(1-beta)*P'*z_PG+beta*mu;
+            k=k+1;
+            if norm(z_PG_new-z_PG)/norm(z_PG)<tol
+                flag=false;
+            else
+                z_PG=z_PG_new;
+            end
+        end
+               
+        
+        %Dinamica per il calcolo della centralita' di katz
+        [X,d] = eigs(W);
+        lambda_W = d(1,1); %Assumiamo di conoscere l'autovalore principale di W
+        k=0;
+        z_K = zeros(14,1);
+        flag=true;
+        while k<k_max && flag
+            z_K_new=(1-beta)/(lambda_W)*W'*z_K+beta*mu;
+            k=k+1;
+            if norm(z_K_new-z_PG)/norm(z_K)<tol
+                flag=false;
+            else
+                z_K=z_K_new;
+            end
+        end
+    \end{lstlisting}
+
+    \questionpart
+
+    %
+\begin{table}[htb]
+    \centering
+    \caption{Confronto tra le centralità}.
+    \begin{tabular}{llllll}
+     Nodes & Degree & Eigenvector & Invariant & Katz & Page-Rank \\
+    1 & $5$ & $0.4042$ & $0.3450$ & $0.0729$ & $0.0766$\\
+    2 & $5$ & $0.4042$ & $0.3450$ & $0.0729$ & $0.0766$\\
+    3 & $5$ & $0.4042$ & $0.3450$ & $0.0729$ & $0.0766$\\
+    4 & $5$ & $0.4042$ & $0.3450$ & $0.0729$ & $0.0766$\\
+    5 & $5$ & $0.4042$ & $0.3450$ & $0.0729$ & $0.0766$\\
+    6 & $6$ & $0.4186$ & $0.4140$ & $0.0768$ & $0.0973$\\
+    7 & $2$ & $0.0867$ & $0.1380$ & $0.0270$ & $0.0507$\\
+    8 & $2$ & $0.0181$ & $0.1380$ & $0.0198$ & $0.0616$\\
+    9 & $6$ & $0.0045$ & $0.4140$ & $0.0269$ & $0.2072$\\
+    10 & $1$ & $8.8970e-4$ & $0.0690$ & $0.0153$ & $0.0401$\\
+    11 & $1$ & $8.8970e-4$ & $0.0690$ & $0.0153$ & $0.0401$\\
+    12 & $1$ & $8.8970e-4$ & $0.0690$ & $0.0153$ & $0.0401$\\
+    13 & $1$ & $8.8970e-4$ & $0.0690$ & $0.0153$ & $0.0401$\\
+    14 & $1$ & $8.8970e-4$ & $0.0690$ & $0.0153$ & $0.0401$\\
+    \end{tabular}
+ \end{table}
+    
+    
+    Si può notare come, per la \textit{eigenvector centrality}, la centralità del nodo \(n_6\) sia maggiore di quella del nodo \(n_9\). Questo dipende dal fatto che il nodo \(n_6\) sia il nodo di frontiera per un cluster completo di nodi. Infatti, per ogni nodo, la centralità \(z_i= (W'z)_i\) è influenzata dall'\textit{in-degree} dei nodi adiacenti. Essendo \(n_6\) adiacente ad un cluster completo è quindi evidente come la sua centralità sia maggiore di quella di \(n_9\), che è adiacente solamente a dei nodi foglia. 
+    
+    Per quanto riguarda la \textit{invariant-centrality}, come già riportato al punto \textbf{(a)}, si ha una dinamica per cui la centralità di ciascun nodo è proporzionale alla \textit{degree-centrality}, per questo motivo la \textit{invariant-centrality} del nodo \(n_6\) è uguale a quella del nodo \(n_9\).
+    
+    La \textit{Page-Rank-centrality} ha una dinamica del tipo 
+    \[z^{(PG)}_{t+ 1} = (1- \beta)P'z^{(PG)}_{t} + \beta\mu\] 
+     Si può notare come \(z^{(PG)}_9>z^{(PG)}_6\), questo dipende dal fatto che, considerando l'interpretazione:
+    \[z^{(PG)} = \beta  \sum \limits_{k \geq 0}^{\infty} (1- \beta)^k (P')^k \mu\]
+
+    La centralità del nodo \(n_9\) risente dell'effetto del cluster completo a destra \textit{più a lungo} del nodo \(n_6\) che, a differenza di \(n_9\), risente del cluster a sinistra per \textit{meno passi}.
+
+    
+    La \textit{Katz-centrality} si basa sulla matrice di adiacenza \(W\) proprio come la \textit{eigenvector centrality}, pertanto ai primi passi della dinamica
+     \[z^{(K)}_{t+ 1} = (1-\beta)\lambda_W^{-1}W' z^{(K)}_t+ \beta \mu\]
+     la centralità del nodo \(n_9\) è già molto minore di quella del nodo \(n_6\), come visto per la \textit{eigenvector centrality}. Nonostante valga ugualmente l'effetto descritto precedentemente dell'espansione in serie, questo non è sufficiente per permettere alla centralità del nodo \(n_9\) di raggiungere quella del nodo \(n_6\).
+\end{alphaparts}
