@@ -80,6 +80,31 @@
     \end{lstlisting}
 
     \questionpart
+
+    %
+\begin{table}[htb]
+    \centering
+    \caption{Confronto tra le centralità}.
+    \begin{tabular}{llllll}
+     Nodes & Degree & Eigenvector & Invariant & Katz & Page-Rank \\
+    1 & $5$ & $0.4042$ & $0.3450$ & $0.0729$ & $0.0766$\\
+    2 & $5$ & $0.4042$ & $0.3450$ & $0.0729$ & $0.0766$\\
+    3 & $5$ & $0.4042$ & $0.3450$ & $0.0729$ & $0.0766$\\
+    4 & $5$ & $0.4042$ & $0.3450$ & $0.0729$ & $0.0766$\\
+    5 & $5$ & $0.4042$ & $0.3450$ & $0.0729$ & $0.0766$\\
+    6 & $6$ & $0.4186$ & $0.4140$ & $0.0768$ & $0.0973$\\
+    7 & $2$ & $0.0867$ & $0.1380$ & $0.0270$ & $0.0507$\\
+    8 & $2$ & $0.0181$ & $0.1380$ & $0.0198$ & $0.0616$\\
+    9 & $6$ & $0.0045$ & $0.4140$ & $0.0269$ & $0.2072$\\
+    10 & $1$ & $8.8970e-4$ & $0.0690$ & $0.0153$ & $0.0401$\\
+    11 & $1$ & $8.8970e-4$ & $0.0690$ & $0.0153$ & $0.0401$\\
+    12 & $1$ & $8.8970e-4$ & $0.0690$ & $0.0153$ & $0.0401$\\
+    13 & $1$ & $8.8970e-4$ & $0.0690$ & $0.0153$ & $0.0401$\\
+    14 & $1$ & $8.8970e-4$ & $0.0690$ & $0.0153$ & $0.0401$\\
+    \end{tabular}
+ \end{table}
+    
+    
     Si può notare come, per la \textit{eigenvector centrality}, la centralità del nodo \(n_6\) sia maggiore di quella del nodo \(n_9\). Questo dipende dal fatto che il nodo \(n_6\) sia il nodo di frontiera per un cluster completo di nodi. Infatti, per ogni nodo, la centralità \(z_i= (W'z)_i\) è influenzata dall'out-deegree dei nodi adiacenti. Essendo \(n_6\) adiacente ad un cluster completo è quindi evidente come la sua centralità sia maggiore di quella di \(n_9\), che è adiacente solamente a dei nodi foglia. Per quanto riguarda la \textit{invariant-centrality}, abbiamo una dinamica per cui la centralità di ciascun nodo è proporzionale all'out deegree dei nodi adiacenti \textbf{normalizzata}, per questo motivo la \textit{invariant-centrality} del nodo \(n_6\) è uguale a quella del nodo \(n_9\). \\
     Sappiamo che la \textit{Page-Rank-centrality} ha una dinamica del tipo 
     \[z^{(PG)}_{t+ 1} = (1- \beta)P'z^{(PG)}_{t} + \beta\mu\] 
